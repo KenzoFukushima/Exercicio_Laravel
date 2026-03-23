@@ -5,9 +5,9 @@
     <form method='post' action='/imc/calcular'>
         @csrf
         <p>Peso:</p><br>
-        <input type="number" name="peso"><br>
+        <input type="number" name="peso" step="0.01"><br>
         <p>Altura:</p> <br>
-        <input type="number" name="altura"><br><br>
+        <input type="number" name="altura" step="0.01"><br><br>
         <button type="submit">Enviar</button>
     </form>
 @endsection
