@@ -12,21 +12,21 @@ class ImcController extends Controller
 
     public function calcular(Request $request)
     {
-        $peso = $request->input('peso');
-        $altura = $request->input('altura');
+        $peso = $request->peso;
+        $altura = $request->altura;
 
         $imc = $peso / ($altura * $altura);
 
         if ($imc < 18.5) {
             $classificacao = "Abaixo do peso";
-        } elseif ($imc < 24.9) {
+        } elseif ($imc < 25) {
             $classificacao = "Normal";
-        } elseif ($imc < 29.9) {
+        } elseif ($imc < 30) {
             $classificacao = "Sobrepeso";
         } else {
             $classificacao = "Obesidade";
         }
 
-        return view('imc.resultado', compact('imc', 'classificacao'));
+        return view('resultado', compact('imc', 'classificacao'));
     }
 }

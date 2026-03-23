@@ -8,4 +8,4 @@ Route::get('/', function () {
 });
 
 Route::get('/imc/form', [ImcController::class, 'form']);
-Route::post('/imc/salvar', [ImcController::class, 'salvar']);
+Route::post('/imc/calcular', [ImcController::class, 'calcular']);
