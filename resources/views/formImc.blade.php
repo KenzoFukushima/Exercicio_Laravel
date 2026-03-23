@@ -10,9 +10,9 @@
     <form method='post' action='/imc/salvar'>
         @csrf
         <p>Peso:</p><br>
-        <input type="text" name="nome"><br>
+        <input type="text" name="peso"><br>
         <p>Altura:</p> <br>
-        <input type="number" name="idade"><br><br>
+        <input type="number" name="altura"><br><br>
         <button type="submit">Enviar</button>
     </form>
 </body>

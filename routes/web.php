@@ -1,11 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ImcController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Rout::get('/imc/form', [imcController::class, '']);
-Route::get('/imc/form', [imcController::class, 'form']);
-Rout::post('/imc/salvar', [imcController::class, 'salvar']);
+Route::get('/imc/form', [ImcController::class, 'form']);
+Route::post('/imc/salvar', [ImcController::class, 'salvar']);
